@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;net472</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AssemblyTitle>RedisInMemory</AssemblyTitle>
+    <Product>RedisInMemory</Product>
+    <Copyright>Copyright © 2023</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <Version>0.4.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>johnnycardy, stepaside, Neutral Labs</Authors>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Neutral/redis-in-memory/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Neutral/redis-in-memory</PackageProjectUrl>
+    <Description>In-Memory .NET StackExchange.Redis library. This library implements the `StackExchange.Redis.IDatabase` interface to provide a test double for your .NET applications using Redis.</Description>
+    <Company>Jonathan Cardy, Neutral Labs</Company>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.6.116" />
+    <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
+  </ItemGroup>
+</Project>
