@@ -4,15 +4,18 @@
     <LangVersion>latest</LangVersion>
     <AssemblyTitle>RedisInMemory</AssemblyTitle>
     <Product>RedisInMemory</Product>
-    <Copyright>Copyright © 2023</Copyright>
+    <Copyright>Copyright © 2023 Neutral Labs Inc.</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <Version>0.4.0</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>johnnycardy, stepaside, Neutral Labs</Authors>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/Neutral/redis-in-memory/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Neutral/redis-in-memory</PackageProjectUrl>
+    <Authors>johnnycardy, stepaside, Neutral Labs Inc.</Authors>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/neutral-protocol/redis-in-memory</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/neutral-protocol/redis-in-memory.git</RepositoryUrl>
     <Description>In-Memory .NET StackExchange.Redis library. This library implements the `StackExchange.Redis.IDatabase` interface to provide a test double for your .NET applications using Redis.</Description>
-    <Company>Jonathan Cardy, Neutral Labs</Company>
+    <PackageTags>redis,in-memory,embedded,in-process,integration,tests,testing,test,integration-testing,integration-tests,test-double,database,cache,async,mock,redis-mock</PackageTags>
+    <Company>Neutral Labs Inc.</Company>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -20,6 +23,10 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\LICENSE" Pack="true" PackagePath="\"/>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="StackExchange.Redis" Version="2.6.116" />
     <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
