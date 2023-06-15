@@ -6,7 +6,7 @@
     <Product>RedisInMemory</Product>
     <Copyright>Copyright © 2023 Neutral Labs Inc.</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <Version>0.4.0</Version>
+    <Version>0.4.1</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>johnnycardy, stepaside, Neutral Labs Inc.</Authors>
